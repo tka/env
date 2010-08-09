@@ -1,0 +1,10 @@
+[user]
+	name = tka lu
+	email = tkatka@gmail.com
+[color]
+	diff = auto
+	status = auto
+	log = auto
+	branch = auto
+[core]
+	editor = vim
