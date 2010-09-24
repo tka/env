@@ -59,12 +59,7 @@ iptables -P FORWARD DROP
 #
 iptables -A open -p tcp -m tcp --dport 80 -j ACCEPT	# apache/http
 iptables -A open -p tcp -m tcp --dport 443 -j ACCEPT	# apache/https
-
-#iptables -A open -p tcp -m tcp --dport 800 -j ACCEPT	# apache/http for nginx test
-#iptables -A open -p tcp -m tcp --dport 4430 -j ACCEPT	# apache/https for nginx test
-
-#iptables -A open -p tcp -m tcp --dport 22 -j ACCEPT	# ssh(default)
-iptables -A open -p tcp -m tcp --dport 723 -j ACCEPT	# ssh(handlino)
+iptables -A open -p tcp -m tcp --dport 22 -j ACCEPT	# ssh(default)
 
 # print the iptables
 iptables -L;
