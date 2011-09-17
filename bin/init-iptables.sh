@@ -60,7 +60,7 @@ iptables -P FORWARD DROP
 iptables -A open -p tcp -m tcp --dport 80 -j ACCEPT	# apache/http
 iptables -A open -p tcp -m tcp --dport 443 -j ACCEPT	# apache/https
 iptables -A open -p tcp -m tcp --dport 22 -j ACCEPT	# ssh(default)
-
+iptables -A open -s 127.0.0.1 -j ACCEPT
 # print the iptables
 iptables -L;
 iptables-save > /etc/iptables.rules
