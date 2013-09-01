@@ -1,3 +1,4 @@
+pakcer -S python-powerline-git libyaml xclip mplayer
 #!/bin/zsh
 
 echo "##### init config #####"
