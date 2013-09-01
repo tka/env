@@ -1,10 +1,10 @@
-pakcer -S python-powerline-git libyaml xclip mplayer
 #!/bin/zsh
+pakcer -S python-powerline-git libyaml xclip mplayer
 
 echo "##### init config #####"
 cd config
 for f in * ; do
 	echo $f
-	cp $f ~/.$f
+	ln -sf `pwd`/$f ~/.$f
 done;
 cd -
