@@ -30,6 +30,7 @@ export PAGER='less'
 export EDITOR='vim'
 export PATH="/opt/java/bin/:/home/tka/bin/:$PATH"
 export PATH="/home/tka/Project/android/android-sdk-linux_x86/platform-tools:$PATH"
+export PATH="/opt/google/chrome:$PATH"
 export JAVA_HOME="/opt/java/"
 #export PATH="$HOME/.rbenv/bin:$PATH"
 
@@ -39,13 +40,14 @@ alias nfs_server='sudo mount 192.168.1.133:/ server'
 alias 'hitfm'='mplayer http://bcr.media.hinet.net/RA000036'
 PATH=/usr/share/java/apache-ant/bin:$PATH
 alias 'be'='bundle exec'
-
-export RUBY_HEAP_MIN_SLOTS=1000000
-export RUBY_HEAP_SLOTS_INCREMENT=1000000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-export RUBY_GC_MALLOC_LIMIT=1000000000
-export RUBY_HEAP_FREE_MIN=500000
-export RUBY_FREE_MIN=200000
+alias 'fireapp'='~/Project/Compass/FireApp/packages/linux/fire.app/run.sh'
+alias 'rcs'='rails c --sandbox'
+#export RUBY_HEAP_MIN_SLOTS=1000000
+#export RUBY_HEAP_SLOTS_INCREMENT=1000000
+#export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+#export RUBY_GC_MALLOC_LIMIT=1000000000
+#export RUBY_HEAP_FREE_MIN=500000
+#export RUBY_FREE_MIN=200000
 
 eval "$(fasd --init auto)"
 alias v='f -e vim' # quick opening files with vim

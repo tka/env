@@ -19,9 +19,9 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'noah/vim256-color'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'rodjek/vim-puppet'
+Bundle 'benmills/vimux'
 Bundle 'jgdavey/tslime.vim'
 Bundle 'jgdavey/vim-turbux'
-Bundle 'gkz/vim-ls'
 Bundle 'Blackrush/vim-gocode'
 Bundle 'othree/html5.vim'
 Bundle 'othree/vim-coffee-script'
@@ -29,8 +29,11 @@ Bundle 'noprompt/vim-yardoc'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/supertab'
 Bundle 'majutsushi/tagbar'
+Bundle 'vim-ruby/vim-ruby'
+
 " vim-scripts repos
 Bundle 'EasyMotion'
+Bundle 'openssl.vim'
 " Bundle 'FuzzyFinder'
 
 " non github repos
@@ -51,6 +54,9 @@ set t_Co=256
 set tabstop=2                    " Global tab width.
 set shiftwidth=2                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
+set ttyfast
+set lazyredraw
+let g:ruby_path = system('rvm current')
 
 colorscheme wombat256mod
 syntax on
@@ -58,6 +64,7 @@ syntax on
 autocmd FileType eruby  setlocal shiftwidth=4 tabstop=4
 autocmd FileType java  setlocal shiftwidth=4 tabstop=4
 autocmd FileType javascript  setlocal shiftwidth=4 tabstop=4
+autocmd FileType html  setlocal shiftwidth=4 tabstop=4
 au BufRead,BufNewFile *.tpl set filetype=html
 au BufRead,BufNewFile *.jst.ejs set filetype=html
 au BufRead,BufNewFile *.js set filetype=javascript 
@@ -66,5 +73,5 @@ au BufRead,BufNewFile *.js set filetype=javascript
 let g:no_turbux_mappings = 1
 map <leader>rt <Plug>SendTestToTmux
 map <leader>rT <Plug>SendFocusedTestToTmux
-let g:turbux_command_rspec  = 'spring rspec'        " default: rspec
+let g:turbux_command_rspec  = 'zeus rspec'        " default: rspec
 map <C-n> :NERDTreeToggle<CR>
